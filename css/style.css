@@ -1,0 +1,150 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* --- CSS Reset --- */
+* { margin: 0; padding: 0; }
+
+/* --- Older Browser Support --- */
+header, hgroup, nav, footer, section, article, figure, figcaption, aside {
+	display: block;
+}
+
+html {
+	position: relative;
+    min-height: 100%;
+}
+
+body {
+	overflow-y: scroll; /*shows the scrollbar regardless of whether it can be used*/
+	font-family: Arial;
+	font-size: 16px;
+	line-height: 1.5;
+}
+
+/* ----- Header ----- */			
+#header {
+	text-align: center;
+	padding-top: 10px;
+}
+h1 {
+	font-weight: normal;
+	font-size: 27px;
+	color: #0064FF;
+	line-height: 0.1;
+}
+h2 {
+	font-size: 20px;
+}
+
+/* ----- Horizontal Navigation Menu ----- */
+#hnav { background-color: #0064FF; }
+#hnav ul { list-style-type: none; margin: 0 auto; position: relative; display: table; } /*aligns the nav to the center*/
+#hnav ul li { display: inline-block; } /*forces menu elements to stay in position*/
+#hnav ul li img { padding-left: 5px; } /*moves the arrow images*/
+#hnav ul li:hover { background-color: #0046B2; }
+#hnav ul li a,visited { display: block; padding: 10px; color: #FFF; text-decoration: none; } /*link covers the whole element*/
+#hnav ul li a:hover { color: #FFF; text-decoration: none; } /*parent reaction on hover*/
+#hnav ul li:hover ul { display: block; } /*displays child container on hover*/
+/* Affects child elements */
+#hnav ul ul { display: none; position: absolute; background-color: #0064FF; width: auto; }
+#hnav ul ul li { display: block; border-top: 1px solid #FFF; min-width: 125px; } /*displays multiple child menus vertically*/
+
+/* ----- Main Content ----- */	
+#content {
+	width: 960px;
+	padding: 20px 20px 30px;
+	margin-bottom: 20px;
+	margin-left: auto ;
+	margin-right: auto ;
+}
+ul {
+	margin-left: 50px;
+}
+img.orange_underline {
+	width: 960px;
+	height: 3px;
+}
+
+a:link { color: #0064FF; text-decoration: none;} /* unvisited link */
+a:visited { color: #0064FF; text-decoration: none;} /* visited link */
+a:hover { color: #0064FF; text-decoration: underline;} /* mouse over link */
+a:active { color: #0064FF; text-decoration: underline;} /* selected link */
+
+/* --- Table --- */
+table {
+	width: 100%;
+	border: 1px solid;
+	border-width: 1px;
+	border-collapse: collapse;
+}
+th { /*table head*/
+	border-width: 1px;
+	padding: 10px;
+	border-style: solid;
+	background-color: #dedede;	
+}
+td {
+	border-width: 1px;
+	padding: 10px;
+	border: 1px solid;
+}
+
+img.img_right_float {
+	float: right;
+	padding: 10px;
+}
+
+/* --- Form --- */
+form {
+	padding-top: 5px;
+}
+input[type=text] {
+	border-width: 1px;
+	border-color: #000;
+	background-color: #CCC;
+}
+textarea {
+	border-width: 1px;
+	border-color: #000;
+	background-color: #CCC;
+}
+input[type=submit] {
+	border-width: 1px;
+	border-color: #000;
+	background-color: #CCC;
+	width: 80px;
+	height: 30px;
+	font-family: Arial strong;
+	font-size: 16px;
+}
+
+/* ----- Footer ----- */
+#footer {
+	font-size: 11px;
+	color: #000;
+	background-color: #0064FF;
+	
+	position: absolute;
+	bottom: 0%;
+	width: 100%;
+}
+
+#footer ul { list-style-type: none; margin: 0 auto; position: relative; display: table; } /*aligns the nav to the center*/
+#footer ul li { display: inline-block; } /*forces menu elements to stay in position*/
+#footer ul li:hover { background-color: #0046B2; }
+#footer ul li a,visited { display: block; padding: 10px; color: #FFF; text-decoration: none; } /*link covers the whole element*/
+#footer ul li a:hover { color: #FFF; text-decoration: none; } /*parent reaction on hover*/
+
+
+/* --- Lightbox --- */
+#container {
+	/*background-color: #CCC;*/
+	padding: 0;
+}
+
+#container img {
+	/*padding-right: 25px;*/
+	padding: 0 15px 15px;
+	height: -50%;
+	width: -50%;
+}
